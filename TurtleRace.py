@@ -20,16 +20,23 @@ for turtle_index in range(0, 7):
 if user_bet:
     is_race_on = True
 
+message = ''
+
 while is_race_on:
     for turtle in all_turtles:
         if turtle.xcor() > 230:
             winning_color = turtle.pencolor()
-            if winning_color == user_bet:
-                print(f"{winning_color} turtle is the winner!! You won")
-            else:
-                print(f"{winning_color} turtle is the winner!! You lost")
             referee = Turtle(shape="turtle")
-            referee.write(f"{winning_color} is the winner", move=True)
+            referee.penup()
+            referee.hideturtle()
+            if winning_color == user_bet:
+                message = f"{winning_color} turtle is the winner!! You won"
+                referee.color("green")
+            else:
+                message = f"{winning_color} turtle is the winner!! You lost"
+                referee.color("red")
+
+            referee.write(message, align="center", font=("Courier", 11, "normal"))
             is_race_on = False
             break
         rand_distance = random.randint(0,10)
