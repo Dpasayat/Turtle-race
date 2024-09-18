@@ -1,5 +1,5 @@
 # Turtle-race
-Bet on your favourite turtle. May the best Turtle win.
+Bet on your favourite turtle. May the best Turtle win!!!!!
 
 Excute the TurtleRace.py file to bet on your favourite turtle.
 
